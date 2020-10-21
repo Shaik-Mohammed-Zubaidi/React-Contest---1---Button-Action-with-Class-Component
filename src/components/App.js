@@ -8,16 +8,16 @@ class App extends React.Component {
       paratext: ""
     };
   }
+  handleclick = () => {
+    this.setState({
+      paratext:
+        "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+    });
+  };
   render() {
     return (
       <div id="main">
-        <button
-          id="click"
-          onClick={() => this.setState({
-            paratext:
-              "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-          })}
-        >
+        <button id="click" onClick={() => this.handleclick()}>
           Click
         </button>
         <p id="para">{this.state.paratext}</p>
